@@ -1,0 +1,10 @@
+#Any(),All(),Logical operators()
+import numpy as np
+a=np.array([10,20,30,25])
+print("Any value>35:",np.any(a>35))
+print("All values>35:",np.all(a>35))
+b = np.array([True, False, True, False])
+c = np.array([True, True, False, False])
+print("Logical_and:",np.logical_and(b,c))
+print("Logical_or:",np.logical_or(b,c))
+print("Logical_not:",np.logical_not(b))

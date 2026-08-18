@@ -1,0 +1,16 @@
+#Array creation helpers:Zeros_like, one_like,full_like,identity
+import numpy as np
+x=np.array([[1,2,3],[4,5,6]])
+print(x)
+print("--------------------------")
+y=np.ones_like(x)
+print(y)
+print("--------------------------")
+z=np.zeros_like(x)
+print(z)
+print("---------------------------")
+z1=np.full_like(x,11)
+print(z1)
+print("----------------------------")
+z2=np.identity(3)
+print(z2)
