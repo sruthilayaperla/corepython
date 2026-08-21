@@ -1,0 +1,18 @@
+#Trace of a matrix: The trace is the sum of the main diagonal elements
+import numpy as np
+A=np.array([[2,3],[1,4]])
+result=np.linalg.trace(A)
+print(result)
+print("-------------------------")
+result=np.linalg.diagonal(A)
+print(result)
+print("---------------------------")
+result=np.linalg.det(A)
+print(result)
+print("----------------------------")
+result=np.linalg.inv(A)
+print(result)
+print("-----------------------------")
+result=np.linalg.norm(A)
+print(result)
+print("-------------------------------")
