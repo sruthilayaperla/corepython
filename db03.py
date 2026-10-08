@@ -1,12 +1,17 @@
-#program to create a table
+# program to create a table
+import os
 import mysql.connector
+
 try:
-    x=mysql.connector.connect(host="localhost",user="root",passwd="brilliant",database="demobase")
-    y=x.cursor()
-    q="create table myemp(eno int,ename char(20),esal int,egrade char(3))"
-    y.exceute(q)
+    x = mysql.connector.connect(
+        host=os.getenv("MYSQL_HOST", "localhost"),
+        user=os.getenv("MYSQL_USER", "root"),
+        password=os.getenv("MYSQL_PASSWORD"),
+        database="demobase",
+    )
+    y = x.cursor()
+    y.execute("CREATE TABLE myemp (eno INT, ename CHAR(20), esal INT, egrade CHAR(3))")
     x.commit()
     print("Table created")
-except:
-    print("Table not created")
-    
+except mysql.connector.Error as error:
+    print(f"Table creation failed: {error}")
